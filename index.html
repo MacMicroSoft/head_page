@@ -19,12 +19,12 @@
                 <div class="flex h-20 items-center justify-between">
                     <!-- Logo -->
                     <div class="flex items-center space-x-8">
-                        <a class="block transition-transform hover:scale-105 group/logo" href="/" aria-label="Truck Market">
+                        <div class="transition-transform group/logo">
                             <span class="text-2xl font-bold text-[#FFD700]">
                                 TRUCK MARKET
                                 <span class="block text-sm font-medium tracking-wider text-[#FFD700]/60">FINCAR & BURAN</span>
                             </span>
-                        </a>
+                        </div>
                         <!-- Navigation -->
                         <nav class="hidden md:block">
                             <ul class="flex items-center space-x-8" id="mainNav">
@@ -58,10 +58,10 @@
                     <!-- Header Actions -->
                     <div class="flex items-center space-x-4">
                         <div class="flex items-center space-x-3">
-                            <a href="#contact" class="group/btn btn-sm bg-transparent text-white border-2 border-white hover:bg-[#FFD700] hover:border-[#FFD700] hover:text-black hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300">
+                            <a href="#contact" class="btn-sm group/btn">
                                 <span class="relative inline-flex items-center">
                                     Замовити дзвінок
-                                    <svg class="w-4 h-4 ml-2 -mr-1 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-4 h-4 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                     </svg>
                                 </span>
@@ -80,39 +80,78 @@
 
         <main class="relative flex grow flex-col pt-20">
             <!-- Hero Section -->
-            <section class="relative">
-                <div class="absolute inset-0 -z-10 bg-gradient-to-br from-black via-brand-yellow/5 to-black"></div>
-                <div class="mx-auto max-w-6xl px-4 sm:px-6">
-                    <div class="py-12 md:py-20">
-                        <div class="pb-12 text-center md:pb-20">
-                            <h1 class="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-brand-yellow),var(--color-brand-yellow-light),var(--color-brand-yellow),var(--color-brand-yellow-light),var(--color-brand-yellow))] bg-[length:200%_auto] bg-clip-text pb-5 text-4xl font-semibold text-transparent md:text-5xl aos-init aos-animate" data-aos="fade-up">Truck Market - ваш надійний партнер</h1>
-                            <div class="mx-auto max-w-3xl">
-                                <p class="mb-8 text-xl text-brand-yellow/65 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">Інноваційні рішення для логістики та вантажних перевезень</p>
-                                <div class="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-                                    <div data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">
-                                        <a class="btn group mb-4 w-full bg-brand-yellow text-black hover:bg-brand-yellow-dark hover:shadow-lg hover:shadow-brand-yellow/20 transition-all sm:mb-0 sm:w-auto" href="#about">
-                                            <span class="relative inline-flex items-center">Дізнатися більше<span class="ml-1 tracking-normal text-black/50 transition-transform group-hover:translate-x-0.5">-&gt;</span></span>
-                                        </a>
-                                    </div>
-                                    <div data-aos="fade-up" data-aos-delay="600" class="aos-init aos-animate">
-                                        <a class="btn relative w-full bg-black text-brand-yellow border-2 border-brand-yellow hover:bg-brand-yellow hover:text-black hover:shadow-lg hover:shadow-brand-yellow/20 transition-all sm:ml-4 sm:w-auto" href="#contact">Зв'язатися з нами</a>
-                                    </div>
+            <section class="relative min-h-screen flex items-center">
+                <!-- Фоновий градієнт -->
+                <div class="absolute inset-0 -z-10">
+                    <div class="absolute inset-0 bg-gradient-to-br from-black via-brand-yellow/5 to-black"></div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black to-transparent"></div>
+                </div>
+
+                <!-- Декоративні елементи -->
+                <div class="absolute inset-0 overflow-hidden">
+                    <!-- Сітка точок -->
+                    <div class="absolute top-20 right-0 w-1/2 h-1/2 opacity-20">
+                        <div class="absolute inset-0" style="background-image: radial-gradient(var(--color-brand-yellow) 1px, transparent 1px); background-size: 30px 30px;"></div>
+                    </div>
+                    <!-- Світлові ефекти -->
+                    <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-brand-yellow/20 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-1/4 right-1/4 w-40 h-40 bg-brand-yellow/10 rounded-full blur-3xl"></div>
+                </div>
+
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 md:py-20">
+                        <!-- Лівий контент -->
+                        <div class="text-left space-y-8">
+                            <div class="space-y-4">
+                                <h1 class="text-4xl md:text-6xl font-bold">
+                                    <span class="text-white">Абсолютно нова</span><br/>
+                                    <span class="text-white">Платформа для продажу вашого авто</span>
+                                </h1>
+                                <p class="text-xl text-brand-yellow/65 max-w-xl">
+                                    Створюємо спільноту однодумців, де продаж авто — це не просто угода, а професійний процес з максимальною вигодою для кожного учасника
+                                </p>
+                            </div>
+
+                            <!-- Кнопки -->
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#about" class="btn btn-primary group">
+                                    <span class="relative inline-flex items-center">
+                                        Продати авто
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="#platform" class="btn btn-outline group">
+                                    <span class="relative inline-flex items-center">
+                                        Приєднатися до Telegram
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <!-- Статистика -->
+                            <div class="grid grid-cols-3 gap-6 pt-8">
+                                <div class="text-center p-4 rounded-xl bg-black/30 backdrop-blur-sm border border-brand-yellow/10">
+                                    <div class="text-3xl font-bold text-brand-yellow mb-1">1000+</div>
+                                    <div class="text-sm text-brand-yellow/65">Активних оголошень</div>
+                                </div>
+                                <div class="text-center p-4 rounded-xl bg-black/30 backdrop-blur-sm border border-brand-yellow/10">
+                                    <div class="text-3xl font-bold text-brand-yellow mb-1">24/7</div>
+                                    <div class="text-sm text-brand-yellow/65">Telegram бот</div>
+                                </div>
+                                <div class="text-center p-4 rounded-xl bg-black/30 backdrop-blur-sm border border-brand-yellow/10">
+                                    <div class="text-3xl font-bold text-brand-yellow mb-1">5000+</div>
+                                    <div class="text-sm text-brand-yellow/65">Користувачів</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            <section id="interviews" class="relative">
-                <div class="mx-auto max-w-6xl px-4 sm:px-6">
-                    <div class="pb-12 md:pb-20">
-                        <div class="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-                            <div class="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-brand-yellow/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-brand-yellow/50">
-                                <span class="inline-flex bg-linear-to-r from-brand-yellow to-brand-yellow-light bg-clip-text text-transparent">Реальні історії</span>
-                            </div>
-                            <h2 class="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-brand-yellow),var(--color-brand-yellow-light),var(--color-brand-yellow),var(--color-brand-yellow-light),var(--color-brand-yellow))] bg-[length:200%_auto] bg-clip-text pb-4 text-3xl font-semibold text-transparent md:text-4xl">Досвід наших клієнтів</h2>
-                            <p class="text-lg text-brand-yellow/65">Читайте інтерв'ю з нашими клієнтами та дізнайтеся, як Truck Market допомагає розвивати бізнес.</p>
+                        <!-- Правий контент -->
+                        <div class="relative lg:block">
+                            <!-- Тут буде новий графік -->
                         </div>
                     </div>
                 </div>
@@ -129,6 +168,56 @@
                         </div>
                         <h2 class="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-brand-yellow),var(--color-brand-yellow-light),var(--color-brand-yellow),var(--color-brand-yellow-light),var(--color-brand-yellow))] bg-[length:200%_auto] bg-clip-text pb-4 text-3xl font-semibold text-transparent md:text-4xl">Truck Market - ваш надійний партнер у світі вантажних перевезень</h2>
                         <p class="text-lg text-brand-yellow/65 max-w-3xl mx-auto">Ми створюємо інноваційні рішення для логістики та вантажних перевезень, допомагаючи бізнесу розвиватися та досягати нових висот.</p>
+                    </div>
+
+                    <!-- Video Section -->
+                    <div class="mb-20">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <!-- Video Container -->
+                            <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-brand-yellow/20">
+                                <div class="absolute inset-0 bg-gradient-to-br from-brand-yellow/20 to-black/50 mix-blend-overlay pointer-events-none"></div>
+                                <iframe 
+                                    class="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/mxQid01XdX8?si=GvXKrKwyL2qm4aBL&autoplay=0&rel=0&showinfo=0" 
+                                    title="Інтерв'ю з клієнтом Truck Market" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <!-- Video Description -->
+                            <div class="space-y-6">
+                                <div class="space-y-4">
+                                    <h3 class="text-2xl font-semibold text-brand-yellow">Дивіться інтерв'ю з нашими клієнтами</h3>
+                                    <p class="text-brand-yellow/65">Наші клієнти діляться своїм досвідом роботи з Truck Market. Дізнайтеся, як наша платформа допомагає оптимізувати процеси продажу авто та збільшувати прибутковість бізнесу.</p>
+                                </div>
+
+                                <!-- Key Points -->
+                                <div class="space-y-4">
+                                    <h4 class="text-xl font-semibold text-brand-yellow">У відео ви дізнаєтесь:</h4>
+                                    <ul class="space-y-3 text-brand-yellow/65">
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 mr-3 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                            <span>Реальні історії успіху наших клієнтів</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 mr-3 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                            <span>Як платформа допомагає в щоденній роботі</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 mr-3 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                            <span>Переваги співпраці з Truck Market</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- First Row -->
@@ -433,6 +522,61 @@
                     });
                 }
             });
+        });
+
+        // Графік продажів - інтерактивність
+        document.addEventListener('DOMContentLoaded', function() {
+            const graph = document.getElementById('salesGraph');
+            const dataPoints = document.querySelectorAll('.data-point');
+            const successRate = document.getElementById('successRate');
+            const monthlyDeals = document.getElementById('monthlyDeals');
+
+            // Анімація чисел
+            function animateValue(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const value = Math.floor(progress * (end - start) + start);
+                    element.textContent = `+${value}%`;
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+
+            // Анімація при появі графіка
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Запускаємо анімацію чисел
+                        animateValue(successRate, 0, 123, 2000);
+                        let monthlyValue = 0;
+                        const monthlyInterval = setInterval(() => {
+                            monthlyValue += 1;
+                            monthlyDeals.textContent = `${monthlyValue}+`;
+                            if (monthlyValue >= 180) clearInterval(monthlyInterval);
+                        }, 10);
+
+                        // Додаємо інтерактивність точкам даних
+                        dataPoints.forEach(point => {
+                            point.addEventListener('mouseover', function() {
+                                this.style.transform = 'scale(1.5)';
+                                this.style.filter = 'drop-shadow(0 0 5px rgba(255, 215, 0, 0.8))';
+                            });
+                            point.addEventListener('mouseout', function() {
+                                this.style.transform = 'scale(1)';
+                                this.style.filter = 'none';
+                            });
+                        });
+
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(graph);
         });
     </script>
 </body>
